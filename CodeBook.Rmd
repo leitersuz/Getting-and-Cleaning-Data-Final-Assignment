@@ -1,0 +1,176 @@
+---
+title: "Codebook for Tidy Data Set"
+subtitle: Tidy Data Set from Human Activity Recognition Using Smartphones Dataset
+  created for Getting and Cleaning Data Course Project
+date: "December 2020"
+output: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data report overview
+The tidy data set contains the average values for a set of features measured in the Human Activity Recongnition Using Smartphones experiment. Sixty-six features are represented in the dataset. The values of each feature variable correspond to the average measurement from each of six activities and each of 30 volunteer research subjects who participated in the experiment. Feature values in the raw data were normalized and bounded within [-1,1]. The tidy data set has the following dimensions:
+
+
+---------------------------------
+Feature                    Result
+------------------------ --------
+Number of observations        180
+
+Number of variables            68
+---------------------------------
+
+
+
+
+# Codebook summary table
+
+--------------------------------------------------------------------------------------------------------------
+Variable                                         Class     # unique   Missing   Description  
+                                                             values                        
+----------------------------------------------- --------- ---------- --------- -------------------------------
+**[activityType]**                              factor             6  0.00 %   Each value corresponds to an activity
+                                                                               1=Walking;
+                                                                               2=Walking upstairs;
+                                                                               3=Walking downstairs;
+                                                                               4=Sitting;
+                                                                               5=Standing;
+                                                                               6=Laying             
+
+**[subjectID]**                                 integer           30  0.00 %   Each value 1-30 corresponds to a research subject.
+
+**[timeBodyAccelerationMeanX]**                 numeric          180  0.00 %   Average of mean values of time domain body acceleration signal for X axis. Body acceleration signal calculated by subtracting gravity from total acceleration.                                                                       
+
+**[timeBodyAccelerationMeanY]**                 numeric          180  0.00 %   Average of mean values of time domain body acceleration signal for Y axis. Calculated by subtracting gravity from total acceleration.              
+
+**[timeBodyAccelerationMeanZ]**                 numeric          180  0.00 %   Average of mean values of time domain body acceleration signal for Z axis. Calculated by subtracting gravity from total acceleration.              
+
+**[timeBodyAccelerationStDevX]**                numeric          180  0.00 %   Average standard deviation of time domain body acceleration signal for X axis. Calculated by subtracting gravity from total acceleration.                 
+
+**[timeBodyAccelerationStDevY]**                numeric          180  0.00 %   Average standard deviation of time domain body acceleration signal for Y axis. Calculated by subtracting gravity from total acceleration.            
+
+**[timeBodyAccelerationStDevZ]**                numeric          180  0.00 %   Average standard deviation of time domain body acceleration signal for Z axis. Calculated by subtracting gravity from total acceleration.             
+
+**[timeGravityAccelerationMeanX]**              numeric          180  0.00 %   Average of mean values of time domain gravity acceleration signal for X axis.              
+
+**[timeGravityAccelerationMeanY]**              numeric          180  0.00 %   Average of mean values of time domain gravity acceleration signal for Y axis.                  
+
+**[timeGravityAccelerationMeanZ]**              numeric          180  0.00 %   Average of mean values of time domain gravity acceleration signal for Z axis.                  
+
+**[timeGravityAccelerationStDevX]**             numeric          180  0.00 %   Average standard deviation of time domain gravity acceleration signal for X axis.                  
+
+**[timeGravityAccelerationStDevY]**             numeric          180  0.00 %   Average standard deviation of time domain gravity acceleration signal for Y axis.              
+
+**[timeGravityAccelerationStDevZ]**             numeric          180  0.00 %   Average standard deviation of time domain gravity acceleration signal for Z axis.
+        
+**[timeBodyAccelerationJerkMeanX]**             numeric          180  0.00 %   Average of mean values of time domain body linear acceleration Jerk signal for X axis.               
+
+**[timeBodyAccelerationJerkMeanY]**             numeric          180  0.00 %   Average of mean values of time domain body linear acceleration Jerk signal for Y axis.                  
+
+**[timeBodyAccelerationJerkMeanZ]**             numeric          180  0.00 %   Average of mean values of time domain body linear acceleration Jerk signal for Z axis.                  
+
+**[timeBodyAccelerationJerkStDevX]**            numeric          180  0.00 %   Average standard deviation of time domain body linear acceleration Jerk signal for X axis.                  
+
+**[timeBodyAccelerationJerkStDevY]**            numeric          180  0.00 %   Average standard deviation of time domain body linear                                                                                                   acceleration Jerk signal for Y axis.               
+
+**[timeBodyAccelerationJerkStDevZ]**            numeric          180  0.00 %   Average standard deviation of time domain body linear acceleration Jerk signal for Z axis.                
+
+**[timeBodyGyroscopeMeanX]**                    numeric          180  0.00 %   Average of mean values of time domain angular velocity gyroscope signal for X axis.              
+
+**[timeBodyGyroscopeMeanY]**                    numeric          180  0.00 %   Average of mean values of time domain angular velocity gyroscope signal for Y axis              
+
+**[timeBodyGyroscopeMeanZ]**                    numeric          180  0.00 %   Average mean value of time domain angular velocity gyroscope signal for Z axis              
+
+**[timeBodyGyroscopeStDevX]**                   numeric          180  0.00 %   Average standard deviation of time domain angular velocity gyroscope signal for X axis.                
+
+**[timeBodyGyroscopeStDevY]**                   numeric          180  0.00 %   Average standard deviation of time domain angular velocity gyroscope signal for Y axis.              
+
+**[timeBodyGyroscopeStDevZ]**                   numeric          180  0.00 %   Average standard deviation of time domain angular velocity gyroscope signal for Z axis.              
+
+**[timeBodyGyroscopeJerkMeanX]**                numeric          180  0.00 %   Average of mean values of time domain angular velocity gyroscope Jerk signal for X axis.               
+
+**[timeBodyGyroscopeJerkMeanY]**                numeric          180  0.00 %   Average of mean values of time domain angular velocity gyroscope Jerk signal for Y axis.               
+
+**[timeBodyGyroscopeJerkMeanZ]**                numeric          180  0.00 %   Average of mean values of time domain angular velocity gyroscope Jerk signal for Z axis.               
+
+**[timeBodyGyroscopeJerkStDevX]**               numeric          180  0.00 %   Average standard deviation of time domain angular velocity gyroscope Jerk signal for X axis.                 
+
+**[timeBodyGyroscopeJerkStDevY]**               numeric          180  0.00 %   Average standard deviation of time domain angular velocity gyroscope Jerk signal for Y axis.               
+
+**[timeBodyGyroscopeJerkStDevZ]**               numeric          180  0.00 %   Average standard deviation of time domain angular velocity gyroscope Jerk signal for Z axis.               
+
+**[timeBodyAccelerationMagnitudeMean]**         numeric          180  0.00 %   Average of mean values of time domain body acceleration signal magnitude.             
+
+**[timeBodyAccelerationMagnitudeStDev]**        numeric          180  0.00 %   Average standard deviation of time domain body acceleration signal magnitude.             
+
+**[timeGravityAccelerationMagnitudeMean]**      numeric          180  0.00 %   Average of mean values of time domain gravity acceleration signal magnitude.                          
+
+**[timeGravityAccelerationMagnitudeStDev]**     numeric          180  0.00 %   Average standard deviation of time domain gravity acceleration signal magnitude.               
+
+**[timeBodyAccelerationJerkMagnitudeMean]**     numeric          180  0.00 %   Average of mean values of time domain body acceleration jerk signal magnitude.               
+
+**[timeBodyAccelerationJerkMagnitudeStDev]**    numeric          180  0.00 %   Average standard deviation of time domain body acceleration jerk signal magnitude.             
+
+**[timeBodyGyroscopeMagnitudeMean]**            numeric          180  0.00 %   Average of mean values of time domain body angular velocity gyroscope signal magnitude.             
+
+**[timeBodyGyroscopeMagnitudeStDev]**           numeric          180  0.00 %   Average standard deviation of time domain body angular velocity gyroscope signal magnitude.             
+
+**[timeBodyGyroscopeJerkMagnitudeMean]**        numeric          180  0.00 %   Average of mean values of time domain body angular velocity gyroscope jerk signal magnitude.                          
+
+**[timeBodyGyroscopeJerkMagnitudeStDev]**       numeric          180  0.00 %   Average standard deviation of time domain body angular velocity gyroscope jerk signal magnitude.                          
+
+**[FFTBodyAccelerationMeanX]**                  numeric          180  0.00 %   Average of mean values of frequency domain body acceleration signal for X axis.                                       
+
+**[FFTBodyAccelerationMeanY]**                  numeric          180  0.00 %   Average of mean values of frequency domain body acceleration signal for Y axis.             
+
+**[FFTBodyAccelerationMeanZ]**                  numeric          180  0.00 %   Average of mean values of frequency domain body acceleration signal for Z axis.             
+
+**[FFTBodyAccelerationStDevX]**                 numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration signal for X axis.             
+
+**[FFTBodyAccelerationStDevY]**                 numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration signal for Y axis.             
+
+**[FFTBodyAccelerationStDevZ]**                 numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration signal for Z axis.             
+
+**[FFTBodyAccelerationJerkMeanX]**              numeric          180  0.00 %   Average of mean values of frequency domain body acceleration jerk signal for X axis.                                                  
+
+**[FFTBodyAccelerationJerkMeanY]**              numeric          180  0.00 %   Average of mean values of frequency domain body acceleration jerk signal for Y axis.             
+
+**[FFTBodyAccelerationJerkMeanZ]**              numeric          180  0.00 %   Average of mean values of frequency domain body acceleration jerk signal for Z axis.             
+
+**[FFTBodyAccelerationJerkStDevX]**             numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration jerk signal for X axis.             
+
+**[FFTBodyAccelerationJerkStDevY]**             numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration jerk signal for Y axis.               
+
+**[FFTBodyAccelerationJerkStDevZ]**             numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration jerk signal for Z axis.               
+
+**[FFTBodyGyroscopeMeanX]**                     numeric          180  0.00 %   Average of mean values of frequency domain body angular velocity gyroscope signal for X axis.                                              
+
+**[FFTBodyGyroscopeMeanY]**                     numeric          180  0.00 %   Average of mean values of frequency domain body angular velocity gyroscope signal for Y axis.              
+
+**[FFTBodyGyroscopeMeanZ]**                     numeric          180  0.00 %   Average of mean values of frequency domain body angular velocity gyroscope signal for Z axis.              
+
+**[FFTBodyGyroscopeStDevX]**                    numeric          180  0.00 %   Average standard deviation of frequency domain body angular velocity gyroscope signal for X axis.                           
+
+**[FFTBodyGyroscopeStDevY]**                    numeric          180  0.00 %   Average standard deviation of frequency domain body angular velocity gyroscope signal for Y axis.             
+
+**[FFTBodyGyroscopeStDevZ]**                    numeric          180  0.00 %   Average standard deviation of frequency domain body angular velocity gyroscope signal for Z axis.             
+
+**[FFTBodyAccelerationMagnitudeMean]**          numeric          180  0.00 %   Average of mean values of frequency domain body acceleration signal magnitude.                           
+
+**[FFTBodyAccelerationMagnitudeStDev]**         numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration signal magnitude.             
+
+**[FFTBodyBodyAccelerationJerkMagnitudeMean]**  numeric          180  0.00 %   Average of mean values of frequency domain body acceleration jerk signal magnitude.             
+
+**[FFTBodyBodyAccelerationJerkMagnitudeStDev]** numeric          180  0.00 %   Average standard deviation of frequency domain body acceleration jerk signal magnitude.             
+
+**[FFTBodyBodyGyroscopeMagnitudeMean]**         numeric          180  0.00 %   Average of mean values of frequency domain body angular velocity gyroscope signal magnitude.             
+
+**[FFTBodyBodyGyroscopeMagnitudeStDev]**        numeric          180  0.00 %   Average standard deviation of frequency domain body angular velocity gyroscope signal magnitude. 
+
+**[FFTBodyBodyGyroscopeJerkMagnitudeMean]**     numeric          180  0.00 %   Average of mean values of frequency domain body angular velocity gyroscope jerk signal magnitude. 
+
+**[FFTBodyBodyGyroscopeJerkMagnitudeStDev]**    numeric          180  0.00 %   Average standard deviation of frequency domain body angular velocity gyroscope jerk signal magnitude. 
+------------------------------------------------------------------------------------------------------
+
